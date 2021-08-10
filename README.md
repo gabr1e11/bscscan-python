@@ -67,6 +67,11 @@
 </p>
 
 
+## Fork
+
+**Modified version hosted at https://github.com/gabr1e11/bscscan-python that supports BSC Tesnet**
+
+See **Usage** below for an example of how to use the package for the testnet
 
 ## Endpoints
 
@@ -192,6 +197,7 @@ bash run_tests.sh YOUR_API_KEY
 Note: This will install the `coverage` package in your activated `python` environment.
 
 ## Usage
+
 In `python`, create a client with your personal [BscScan.com](https://bscscan.com/) API key:
 
 ``` python
@@ -202,6 +208,24 @@ YOUR_API_KEY = "..."
 
 async def main():
   async with BscScan(YOUR_API_KEY) as bsc:
+    print(await bsc.get_bnb_balance(address="0x0000000000000000000000000000000000001004"))
+
+if __name__ == "__main__":
+  asyncio.run(main())
+
+> '167195709084498025431541166'
+```
+
+For the BSC Testnet you can pass a the **testnet** parameter set to *True* to connect to the Testnet:
+
+``` python
+import asyncio
+from bscscan import BscScan
+
+YOUR_API_KEY = "..."
+
+async def main():
+  async with BscScan(YOUR_API_KEY, testnet=True) as bsc:
     print(await bsc.get_bnb_balance(address="0x0000000000000000000000000000000000001004"))
 
 if __name__ == "__main__":
