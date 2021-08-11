@@ -66,7 +66,6 @@
   <i>A fork of the <a href="https://github.com/pcko1/etherscan-python">etherscan-python</a> package.</i>
 </p>
 
-
 ## Fork
 
 **Modified version hosted at https://github.com/gabr1e11/bscscan-python that supports BSC Tesnet**
@@ -80,22 +79,22 @@ The following endpoints are provided:
 <details><summary>Accounts <a href="https://bscscan.com/apis#accounts">(source)</a></summary>
 <p>
 
-* `get_bnb_balance`
-* `get_bnb_balance_multiple`
-* `get_normal_txs_by_address`
-* `get_normal_txs_by_address_paginated`
-* `get_internal_txs_by_address`
-* `get_internal_txs_by_address_paginated`
-* `get_internal_txs_by_txhash`
-* `get_internal_txs_by_block_range_paginated`
-* `get_bep20_token_transfer_events_by_address`
-* `get_bep20_token_transfer_events_by_contract_address_paginated`
-* `get_bep20_token_transfer_events_by_address_and_contract_paginated`
-* `get_bep721_token_transfer_events_by_address`
-* `get_bep721_token_transfer_events_by_contract_address_paginated`
-* `get_bep721_token_transfer_events_by_address_and_contract_paginated`
-* `get_validated_blocks_by_address`
-* `get_validated_blocks_by_address_paginated`
+-   `get_bnb_balance`
+-   `get_bnb_balance_multiple`
+-   `get_normal_txs_by_address`
+-   `get_normal_txs_by_address_paginated`
+-   `get_internal_txs_by_address`
+-   `get_internal_txs_by_address_paginated`
+-   `get_internal_txs_by_txhash`
+-   `get_internal_txs_by_block_range_paginated`
+-   `get_bep20_token_transfer_events_by_address`
+-   `get_bep20_token_transfer_events_by_contract_address_paginated`
+-   `get_bep20_token_transfer_events_by_address_and_contract_paginated`
+-   `get_bep721_token_transfer_events_by_address`
+-   `get_bep721_token_transfer_events_by_contract_address_paginated`
+-   `get_bep721_token_transfer_events_by_address_and_contract_paginated`
+-   `get_validated_blocks_by_address`
+-   `get_validated_blocks_by_address_paginated`
 
 </details>
 
@@ -126,18 +125,18 @@ The following endpoints are provided:
 <details><summary>GETH/Parity Proxy <a href="https://bscscan.com/apis#proxy">(source)</a></summary>
 <p>
 
-* `get_proxy_block_number`
-* `get_proxy_block_by_number`
-* `get_proxy_block_transaction_count_by_number`
-* `get_proxy_transaction_by_hash`
-* `get_proxy_transaction_by_block_number_and_index`
-* `get_proxy_transaction_count`
-* `get_proxy_transaction_receipt`
-* `get_proxy_call`
-* `get_proxy_code_at`
-* `get_proxy_storage_position_at`
-* `get_proxy_gas_price`
-* `get_proxy_est_gas`
+-   `get_proxy_block_number`
+-   `get_proxy_block_by_number`
+-   `get_proxy_block_transaction_count_by_number`
+-   `get_proxy_transaction_by_hash`
+-   `get_proxy_transaction_by_block_number_and_index`
+-   `get_proxy_transaction_count`
+-   `get_proxy_transaction_receipt`
+-   `get_proxy_call`
+-   `get_proxy_code_at`
+-   `get_proxy_storage_position_at`
+-   `get_proxy_gas_price`
+-   `get_proxy_est_gas`
 
 </details>
 
@@ -149,7 +148,6 @@ The following endpoints are provided:
 * `get_acc_balance_by_token_contract_address`
 
 </details>
-
 
 <details><summary>Stats <a href="https://bscscan.com/apis#stats">(source)</a></summary>
 <p>
@@ -168,31 +166,31 @@ The following endpoints are provided:
 
 </details>
 
-*If you think that a newly-added method is missing, kindly open an [issue](https://github.com/pcko1/bscscan-python/issues) as a feature request and I will do my best to add it.*
+_If you think that a newly-added method is missing, kindly open an [issue](https://github.com/pcko1/bscscan-python/issues) as a feature request and I will do my best to add it._
 
 ## Installation
 
-Before proceeding, you should register an account on [BscScan.com](https://bscscan.com/) and [generate a personal API key](https://bscscan.com/myapikey) to use. 
+Before proceeding, you should register an account on [BscScan.com](https://bscscan.com/) and [generate a personal API key](https://bscscan.com/myapikey) to use.
 
 Install from source:
 
-``` bash
-pip install git+https://github.com/pcko1/bscscan-python.git@stable
+```bash
+pip install git+https://github.com/gabr1e11/bscscan-python.git@stable
 ```
 
-Alternatively, install from [PyPI](https://pypi.org/project/bscscan-python/):
+Alternatively, install from [PyPI](https://pypi.org/project/bscscan-python-testnet/):
 
 ```bash
-pip install bscscan-python
+pip install bscscan-python-testnet
 ```
 
 ## Unit tests
 
 In `bash`, test that everything looks OK on your end using your `YOUR_API_KEY` (without quotation marks):
 
-``` bash
+```bash
 bash run_tests.sh YOUR_API_KEY
-````
+```
 
 Note: This will install the `coverage` package in your activated `python` environment.
 
@@ -200,7 +198,7 @@ Note: This will install the `coverage` package in your activated `python` enviro
 
 In `python`, create a client with your personal [BscScan.com](https://bscscan.com/) API key:
 
-``` python
+```python
 import asyncio
 from bscscan import BscScan
 
@@ -216,9 +214,9 @@ if __name__ == "__main__":
 > '167195709084498025431541166'
 ```
 
-For the BSC Testnet you can pass a the **testnet** parameter set to *True* to connect to the Testnet:
+For the BSC Testnet you can pass a the **testnet** parameter set to _True_ to connect to the Testnet:
 
-``` python
+```python
 import asyncio
 from bscscan import BscScan
 
@@ -238,7 +236,6 @@ if __name__ == "__main__":
 
 Detailed examples (arguments and results) for all methods may be found in the [official documentation](https://bscscan-python.pankotsias.com/bscscan.modules.html). [![Documentation Status](https://img.shields.io/badge/docs-passing-brightgreen)](https://bscscan-python.pankotsias.com/)
 
-
 ## Issues
 
 For problems regarding installing or using the package please open an [issue](https://github.com/pcko1/bscscan-python/issues). Kindly avoid disclosing potentially sensitive information such as your API keys or your wallet addresses.
@@ -247,7 +244,7 @@ For problems regarding installing or using the package please open an [issue](ht
 
 Kotsias, P. C., pcko1/bscscan-python: v1.0.0. *https://github.com/pcko1/bscscan-python (2021)*. doi:10.5281/zenodo.4781726
 
-or in ```bibtex```:
+or in `bibtex`:
 
 ```bibtex
 @misc{Kotsias2020,
@@ -260,8 +257,21 @@ or in ```bibtex```:
 }
 ```
 
+Roberto Cano, gabr1e11/bscscan-python: v2.0.1 *https://github.com/gabr1e11/bscscan-python (2021)*.
+
+or in `bibtex`:
+
+```bibtex
+@misc{RobertoCano2021,
+  author = {Roberto Cano},
+  title = {gabr1e11/bscscan-python},
+  year = {2021},
+  url = {https://github.com/gabr1e11/bscscan-python},
+}
+```
+
 Feel free to leave a :star: if you found this package useful.
 
-___
+---
 
 Powered by [Bscscan.com APIs](https://bscscan.com/apis).
